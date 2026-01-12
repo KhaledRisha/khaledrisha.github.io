@@ -38,14 +38,16 @@
             -webkit-font-smoothing: antialiased;
         }
 
+   
         .hero-banner {
             width: 100%;
-            height: 10vh;
-            min-height: 350px;
+            height: 35vh; /* Increased from 10vh to show more photo on mobile */
+            min-height: 300px;
             background: linear-gradient(to bottom, rgba(10,10,10,0.2) 0%, rgba(10,10,10,1) 100%), 
                         url('https://media.licdn.com/dms/image/v2/D4D16AQERH80KLrjH7Q/profile-displaybackgroundimage-shrink_350_1400/B4DZpswVp9JIAY-/0/1762761203084?e=1769644800&v=beta&t=rlNzr5Uch4-v3w45kRbVK9fqOZ_c_vTliKQEuoMn5mI');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
 
         .main-container {
@@ -65,7 +67,7 @@
         }
 
         h1 {
-            font-family: 'system-ui', serif;
+            font-family: 'system-ui', -apple-system, sans-serif;
             font-size: clamp(2.5rem, 8vw, 4rem);
             letter-spacing: 4px;
             margin-bottom: 0.5rem;
@@ -153,7 +155,15 @@
             text-transform: uppercase;
         }
 
+       
         @media (max-width: 768px) {
+            .hero-banner { 
+                height: 30vh; 
+                min-height: 250px;
+            }
+            .main-container { 
+                margin: -80px auto 0; 
+            }
             h1 { font-size: 2.5rem; }
             .profile-card { padding: 3rem 1.5rem; }
             .social-links { gap: 1.5rem; }
@@ -161,9 +171,7 @@
     </style>
 </head>
 <body>
-
     <div class="hero-banner"></div>
-
     <main class="main-container">
         <div class="profile-card">
             <div class="job-title">
@@ -189,11 +197,9 @@
 
             <a href="mailto:khaledrisha@gmail.com" class="contact-btn">Get In Touch</a>
         </div>
-
         <footer>
             &copy; 2026 Khaled Risha 
         </footer>
     </main>
-
 </body>
 </html>
